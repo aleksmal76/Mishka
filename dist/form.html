@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="dist/css/main.css">
+  <script src="src/js/main.js"></script>
+  <script type="text/javascript" src="src/js/picturefill.js"></script>
+  <link rel="preload" href="dist/js/scripts.min.js" as="script">
+  <link rel="preload" href="src/js/main.js" as="script">
+  <link rel="preload" href="src/fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="src/fonts/opensans-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="src/fonts/opensans-regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="src/fonts/opensans-bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="dist/css/main.css" as="style" onload="this.rel='stylesheet'">
+  <title>Mishka - интернет - магазин</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="menu-top">
+        <div class="menu-top__crown">
+          <a class="menu-top__logo-link" href="index.html">
+            <img class="menu-top__logo-mobile" src="src/img/logo-mobile.png" width="86px" height="35px" alt="Mishka">
+          </a>
+          <div class="hamburger-menu">
+            <span class="hamburger-btn closed" id="buttonMenu"></span>
+          </div>
+        </div>
+        <ul class="menu-top__list closed" id="menuList">
+          <li class="menu-top__logo">
+            <a class="menu-top__logo-link" href="index.html">
+              <img class="menu-top__logo-tablet" src="src/img/logo-tablet.png" width="113px" height="46px" alt="Mishka">
+              <img class="menu-top__logo-desktop" src="src/img/logo-desktop.png" width="149px" height="72px" alt="Mishka">
+            </a>
+          </li>
+          <li class="menu-top__item">
+            <a class="menu-top__link menu-top__link--catalog" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="menu-top__item">
+            <a class="menu-top__link menu-top__link--form" href="form.html" target="blank">Вязание на заказ</a>
+          </li>
+          <li class="menu-top__item">
+            <form class="search-form" method="get">
+              <button class="search-submit" type="submit"></button>
+              <label class="search-label">Поиск по сайту</label>
+              <input class="search-input" type="search" name="search" placeholder="Поиск по сайту">
+            </form>
+          </li>
+          <li class="menu-top__item menu-top__item--cart">
+            <a class="menu-top__link menu-top__link--cart" href="#">
+              <span class="menu-top__link-cart"></span>Корзина: пока пуста</a>
+          </li>
+          <li class="menu-top__item menu-top__item--delivery">
+            <p class="menu-top__text menu-top__text--delivery">Бесплатная доставка по России</p>
+          </li>
+          <li class="menu-top__item menu-top__item--new">
+            <a class="menu-top__link menu-top__link--new">Новые поступления</a>
+          </li>
+          <li class="menu-top__item menu-top__item--sale">
+            <a class="menu-top__link menu-top__link--sale">Распродажа</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="form-page">
+      <div class="form-page__descr">
+        <div class="form-page__title--block">
+          <h3 class="form-page__title">Вязание на заказ</h3>
+        </div>
+        <div class="form-page__title-line"></div>
+        <p class="form-page__text">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+      </div>
+      <form class="form-page__form" action="" method="post">
+          <fieldset class="form-page__filedset form-page__filedset--radio">
+            <legend class="form-page__legend form-page__legend--radio">Тип</legend>
+            <div class="form-page__inner form-page__inner--radio">
+              <div class="form-page__section form-page__section--radio">
+                <input class="form-page__input form-page__input--radio" type="radio" id="radio-1" name="radio" checked>
+                <label class="form-page__label form-page__label--radio" for="radio-1">Аксессуар для интерьера</label>
+              </div>
+              <div class="form-page__section  form-page__section--radio">
+                <input class="form-page__input form-page__input--radio" type="radio" id="radio-2" name="radio">
+                <label class="form-page__label form-page__label--radio" for="radio-2">Детская игрушка</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-page__filedset form-page__filedset--checkbox">
+            <legend class="form-page__legend  form-page__legend--color">Цвет</legend>
+            <div class="form-page__inner  form-page__inner--checkbox">
+              <div class="form-page__group--checkbox">
+                <div class="form-page__section form-page__section--checkbox">
+                  <input class="   form-page__input--checkbox" type="checkbox" id="checkbox-1" name="checkbox" checked>
+                  <label class=" form-page__label--checkbox" for="checkbox-1">Белый</label>
+                </div>
+                <div class="form-page__section form-page__section--checkbox">
+                  <input class="  form-page__input--checkbox" type="checkbox" id="checkbox-2" name="checkbox" checked>
+                  <label class=" form-page__label--checkbox" for="checkbox-2">Серый</label>
+                </div>
+                <div class="form-page__section form-page__section--checkbox">
+                  <input class="  form-page__input--checkbox" type="checkbox" id="checkbox-3" name="checkbox">
+                  <label class=" form-page__label--checkbox" for="checkbox-3">«Тиффани»</label>
+                </div>
+                <div class="form-page__section form-page__section--checkbox">
+                  <input class="form-page__input--checkbox" type="checkbox" id="checkbox-4" name="checkbox">
+                  <label class=" form-page__label--checkbox" for="checkbox-4">Черный</label>
+                </div>
+                <div class="form-page__section form-page__section--checkbox">
+                  <input class=" form-page__input--checkbox" type="checkbox" id="checkbox-5" name="checkbox">
+                  <label class=" form-page__label--checkbox" for="checkbox-5">Розовый</label>
+                </div>
+                <div class="form-page__section form-page__section--checkbox">
+                  <input class=" form-page__input--checkbox" type="checkbox" id="checkbox-6" name="checkbox">
+                  <label class=" form-page__label--checkbox" for="checkbox-6">Оранжевый</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-page__filedset form-page__filedset--checkbox">
+              <legend class="form-page__legend form-page__legend--name">Фио</legend>
+            <div class="form-page__inner form-page__inner--name">
+              <div class="form-page__section--name">
+                <label class="form-page__label--name">Имя:</label>
+                <input class="form-page__input-name form-page__input-name--name" type="text" placeholder="Введите ваше имя*" required maxlength="10">
+                <div class="form-page__line form-page__line--name"></div>
+              </div>
+              <div class="form-page__section--name">
+                <label class="form-page__label form-page__label--name">Фамилия:</label>
+                <input class="form-page__input-name" type="text" placeholder="Укажите фамилию*" required maxlength="25">
+                <div class="form-page__line form-page__line--last"></div>
+              </div>
+              <div class="form-page__section--name">
+                <label class="form-page__label--name">Отчество:</label>
+                <input class="form-page__input-name" type="text" placeholder="Отчество, если желаете" maxlength="30">
+                <div class="form-page__line form-page__line--last"></div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="form-page__inner form-page__inner--info">
+          <fieldset class="form-page__filedset form-page__filedset--checkbox">
+            <legend class="form-page__legend form-page__legend--phone">Тел</legend>
+            <div class="form-page__box">
+                <input class="form-page__input--phone" type="number" placeholder="+7 XXX XX XX*" required  size="20" minlength="9" maxlength="14" >
+                <label class="form-page__label--phone"></label>
+                <div class="form-page__line form-page__line--phone"></div>
+            </div>
+            <legend class="form-page__legend form-page__legend--email">E-mail</legend>
+             <div class="form-page__box form-page__box--email">
+
+                <input class="form-page__input--email" type="email" placeholder="Ваш Email*" required maxlength="30">
+                <label class="form-page__label--email"></label>
+                <div class="form-page__line form-page__line--email"></div>
+              </div>
+          </fieldset>
+        </div>
+          <fieldset class="form-page__filedset form-page__filedset--checkbox">
+            <legend class=" form-page__legend form-page__legend--extra">Доп</legend>
+            <div class="form-page__inner form-page__inner--textarea">
+              <textarea class="form-page__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
+          </fieldset>
+        <div class="form-page__wrap">
+          <span>*Поля обязательны для заполнения</span>
+          <button class="btn form-page__btn">Отправить заказ</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__bg">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <a class="footer__logo-link">
+            <img class="footer__logo" src="src/img/logo-footer.png" width="102px" height="34px" alt="Mishka">
+          </a>
+        </div>
+        <div class="footer__social">
+          <a class="footer__link footer__insta" href="#"></a>
+          <a class="footer__link footer__facebook" href="#"></a>
+          <a class="footer__link footer__twitter" href="#"></a>
+        </div>
+        <div class="footer__copyright">
+          <p class="footer__creator">Разработано
+            <span class="footer__icon"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="dist/js/scripts.min.js"></script>
+</body>
+
+</html>
