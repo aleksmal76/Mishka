@@ -492,12 +492,10 @@
     min-width: 668px;
     min-height: 520px;
     padding: 32px 0 32px 0;
-
-    margin: 0 auto;
+  margin: 0 auto;
     &__item {
       height: 421px;
-
-      width: 668px;
+width: 668px;
       @include flexbox;
       flex-wrap: wrap;
       justify-content: space-between;

@@ -215,11 +215,7 @@ margin-top: 0px;
 &__input-name:hover{
   border-bottom: 2px solid $greenLeft;
 }
-
-
-
-
-  &__input-name:focus{
+&__input-name:focus{
     outline: none;
   }
   &__line{
@@ -885,7 +881,7 @@ margin-top: 0px;
           top: 5px;
           left: 2px;
         }
-       
+
 
       &__input--radio:checked + &__label--radio::after{
         top: 24px;
