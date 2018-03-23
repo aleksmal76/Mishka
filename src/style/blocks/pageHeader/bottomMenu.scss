@@ -2,7 +2,7 @@
 
     @media only screen and (max-width: 767px) {
          &__bg{
-           background: url(/src/img/header-mobile-1x.jpg);
+           background: url('/src/img/header-mobile-1x.jpg');
            background-position: 50% -17%;
            background-repeat: no-repeat;
            background-size: 100% auto;
@@ -53,14 +53,14 @@
         font-weight: 700;
         display: inline-block;
         width: 100%;
-       
+
         padding: 24px 165px 27px 28px;
 
 
         &--left::before {
             position: absolute;
             content: "";
-            background: url(/src/img/sprites.png) no-repeat;
+            background: url('/src/img/sprites.png') no-repeat;
             background-position: -226px -12px ;
             width: 41px;
             height: 62px;
@@ -71,7 +71,7 @@
         &--right::before {
         position: absolute;
         content: "";
-        background: url(/src/img/sprites.png) no-repeat;
+        background: url('/src/img/sprites.png') no-repeat;
         background-position: -315px -12px ;
 	    width: 61px;
         height: 61px;
@@ -98,7 +98,7 @@
         }
 
         &__bg{
-            background: url(/src/img/header-tablet-2x.jpg);
+            background: url('/src/img/header-tablet-2x.jpg');
             background-position: center -3px;
             background-repeat: no-repeat;
             background-size: cover;
@@ -196,7 +196,7 @@
         width: 1200px;
 
         &__bg {
-            background: url(/src/img/header-desktop-2x.jpg);
+            background: url('/src/img/header-desktop-2x.jpg');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
