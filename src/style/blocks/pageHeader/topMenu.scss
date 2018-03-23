@@ -1,0 +1,598 @@
+
+@media screen and (min-width: 320px)  and (max-width: 767px){
+
+  .hamburger-menu{
+    align-self: flex-end;
+  }
+
+.hamburger-btn{
+  display: block;
+  font-size: 0;
+  background: none;
+  border: none;
+  width: 20px;
+  height: 14px;
+  position: relative;
+  cursor: pointer;
+  top: -28px;
+  right: 28px;
+}
+.hamburger-btn,
+.hamburger-btn::before,
+.hamburger-btn::after{
+  border-top: 2px solid #000;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+
+transition:   .3s;
+cursor: pointer;
+}
+.hamburger-btn::before,
+.hamburger-btn::after{
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  right: 0;
+
+}
+.hamburger-btn::before{
+top: 4px;
+}
+.hamburger-btn::after{
+  top: 10px;
+}
+.hamburger-btn.opened{
+  z-index: 2;
+  border-top-color: transparent;
+
+}
+
+.hamburger-btn.opened::after{
+cursor: pointer;
+  transform: rotate(45deg);
+  top: 4px;
+
+}
+.hamburger-btn.opened::before{
+cursor: pointer;
+  	transform: rotate(-45deg);
+  	
+
+}
+
+.menu-top__list.closed{
+    cursor: pointer;
+    display: none;
+  }
+  .menu-top__list.opened{
+    display: flex;
+    min-height: 395px;
+  }
+}
+
+
+
+
+.menu-top {
+  height: 79px;
+  position: relative;
+
+  &__crown{
+    height: 79px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid $frameMenu;
+  }
+
+  &__logo {
+    text-align: center;
+    height: 79px;
+
+
+      &:hover {
+        opacity: 0.6;
+      }
+      &:active {
+        opacity: 0.3;
+      }
+
+      &-mobile{
+        margin-top: 20px;
+      }
+
+    &-tablet, &-desktop{
+        display: none;
+      }
+ }
+
+  &__item {
+    display: flex;
+    border-bottom: 1px solid $frameMenu;
+    text-align: center;
+    height: 78px;
+    background-color: $white;
+    z-index: 1;
+    line-height: 85px;
+  }
+
+  &__link-cart {
+    display: inline-block;
+    background: url('/src/img/sprites.png') no-repeat;
+    background-position: -16px -214px ;
+    width: 21px;
+    height: 18px;
+    position: relative;
+    top: 0;
+    left: -21px;
+    vertical-align: middle;
+  }
+
+  &__link-cart:hover{
+    background: url(/src/img/sprites.png) no-repeat;
+    background-position: -65px -215px ;
+    width: 21px;
+    height: 18px;
+    position: relative;
+    top: 0;
+    left: -21px;
+    vertical-align: middle;
+  }
+
+  &__link-cart:active{
+    background: url(/src/img/sprites.png) no-repeat;
+    background-position: -114px -215px ;
+    width: 21px;
+    height: 18px;
+    position: relative;
+    top: 0;
+    left: -21px;
+    vertical-align: middle;
+  }
+
+  &__item--delivery{
+    display: none;
+  }
+
+  &__item--new{
+    display: none;
+  }
+
+  &__item--sale{
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
+  &__link {
+    width: 100%;
+    @include titleSm;
+    color: $black;
+    line-height: calc(27/17);
+    text-decoration: none;
+    text-align: center;
+    padding: 30px 0 32px 0;
+    cursor: pointer;
+  }
+
+  &__link:hover {
+    opacity: 0.4;
+  }
+  &__link:active {
+    opacity: 0.1;
+  }
+  .menu-top.closed{
+    display: none;
+  }
+  .menu-top.opened{
+    display: block;
+  }
+}
+
+form.search-form {
+  position: relative;
+  height: 79px;
+  margin: 0 auto;
+}
+input.search-input{
+  width: 180px;
+  height: 35px;
+  outline: none;
+  border: none;
+}
+input.search-input::placeholder{
+  @include titleSm;
+  line-height: calc(24/17);
+  color: $black;
+}
+button.search-submit{
+  border: none;
+  cursor: pointer;
+  background: url(/src/img/sprites.png) no-repeat;
+  background-position: -16px -261px ;
+	width: 18px;
+  height: 19px;
+  outline: none;
+  vertical-align: middle;
+  position: relative;
+  top: 0;
+  left: -20px;
+}
+
+button.search-submit:hover {
+  background: url(/src/img/sprites.png) no-repeat;
+  background-position: -62px -260px ;
+	width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  position: relative;
+  top: 0;
+  left: -20px;
+
+}
+button.search-submit:active {
+  background: url(/src/img/sprites.png) no-repeat;
+  background-position: -114px -259px ;
+	width: 18px;
+	height: 18px;
+  vertical-align: middle;
+  position: relative;
+  top: 0;
+  left: -20px;
+}
+
+label.search-label {
+  display: none;
+}
+
+button.search-submit:hover{
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .hamburger-menu{
+    display: none;
+  }
+
+  .menu-top {
+
+    height: 87px;
+
+    &__crown{
+      display: none;
+    }
+
+    &__logo {
+      height: 89px;
+      text-align: left;
+      flex-basis: 344px;
+         &-tablet{
+           display: inline-block;
+           padding: 21px;
+          }
+         &-mobile, &-desktop{
+            display: none;
+         }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 180px;
+    }
+
+    &__item {
+      height: 89px;
+      text-align: center;
+      padding: 0;
+      z-index: 1;
+      background-color: transparent;
+    }
+
+    &__item:nth-child(1) {
+      height: 89px;
+      border: 1px solid $frameMenu;
+    }
+
+    &__item:nth-child(2){
+      border: none;
+      order: 4;
+      text-align: right;
+      flex-basis: 150px;
+    }
+
+    &__item:nth-child(3){
+      border: none;
+      order: 5;
+      flex-basis: 181px;
+    }
+
+    &__item:nth-child(4){
+      height: 90px;
+      width: 80px;
+      margin: 0;
+      border-left: 1px solid $frameMenu;
+      border-right: 1px solid $frameMenu;
+      border-bottom: none;
+    }
+
+    &__item--cart{
+      flex-basis: 290px;
+      border-bottom: none;
+    }
+
+    &__item--delivery {
+      display: inline-block;
+      border: none;
+      order: 7;
+      flex-basis: 337px;
+      text-align: right;
+    }
+
+    &__item--new{
+      display: none;
+    }
+
+    &__item--sale{
+      display: none;
+    }
+
+    &__text{
+      @include itemTop;
+      font-size: 15px;
+      line-height: calc(55/15);
+      margin: 0;
+      color: $darkGray;
+    }
+
+    &__link:nth-child(2) {
+      @include itemTop;
+      font-weight: 700;
+      padding: 10px;
+    }
+    &__link--catalog{
+      font-size: 15px;
+      line-height: 0;
+      padding: 27px 13px 32px 0; 
+    }
+
+    &__link--form{
+      font-size: 15px; 
+      line-height: 0;  
+      padding: 27px 13px 32px 0; 
+    }
+
+    &__link:nth-child(3) {
+      @include itemTop;
+      font-weight: 700;
+      padding: 10px;
+    }
+    &__link-cart{
+      left: -30px;
+    }
+    &__link-cart:hover{
+      left: -30px;
+    }
+    &__link-cart:active{
+      left: -30px;
+    }
+    &__link--cart{
+      padding-left: 39px;
+    }
+}
+
+input.search-input {
+  position: absolute;
+  top: 19px;
+  left: -22px;
+  background: transparent;
+  outline: none;
+  width: 0;
+  height: 55px;
+  padding: 0 45px 0 19px;
+  border: none;
+  transition: .4s cubic-bezier(0, 0.8, 0, 1);
+  z-index: 2;
+}
+
+input.search-input:focus{
+  width: 150px;
+  z-index: 1;
+  border-bottom: 1px solid $greenLeft;
+  margin-top: 20px;
+}
+
+button.search-submit{
+  top: 0;
+  left: 0;
+}
+
+button.search-submit:hover{
+  top: 0;
+  left: 0;
+}
+
+button.search-submit:active{
+  top: 0;
+  left: 0;
+}
+
+input.search-input::placeholder{
+  font-size: 10px;
+}
+
+.hamburger-btn.closed{
+  display: none;
+}
+
+}
+
+@media (min-width: 1024px) {
+
+  .menu-top {
+    height: 89px;
+    width: 1200px;
+    margin: 0 auto;
+
+    .hamburger-btn{
+      display: none;
+    }
+
+    &__logo{
+       order: 4;
+       flex-basis: 270px;
+       align-self: center;
+       &-desktop{
+         display: inline-block;
+         margin: 10px 0 0 21px;
+       }
+       &-mobile, &-tablet{
+         display: none;
+      }
+  }
+
+  &__logo-img{
+    display: block;
+    background: url(/src/img/sprites.png) -579px -9px no-repeat;
+	  width: 149px;
+    height: 72px;
+    margin: 5px auto;
+  }
+  &__item:nth-child(2){
+    order: 2;
+    flex-basis: 240px;
+    border-right: 1px solid $frameMenu;
+    text-align: center;
+  }
+
+    &__item:nth-child(3){
+      order: 3;
+      flex-basis: 243px;
+      text-align: center;
+    }
+
+    &__item:nth-child(4){
+      order: 4;
+      flex-basis: 84px;
+    }
+
+    &__item--cart{
+      order: 5;
+      flex-basis: 315px;
+
+    }
+
+    &__item--delivery{
+      order: 9;
+      z-index: 1;
+      flex-basis: 690px;
+    }
+
+    &__item--new{
+      display: inline;
+      order: 7;
+      border: none;
+      z-index: 1;
+      flex-basis: 161px;
+      text-align: end;
+      line-height: 3.7;
+    }
+
+    &__item--sale{
+      display: inline;
+      order: 8;
+      border: none;
+      z-index: 1;
+      flex-basis: 200px;
+      line-height: 3.7;
+    }
+    &__text{
+      line-height: 3.7;
+    }
+    &__link--catalog,
+    &__link--form{
+      width: 100%;
+      font-size: 17px;
+      font-weight: 700;
+      color: #000000;
+      line-height: calc(27/17);
+      text-decoration: none;
+      text-align: center;
+      padding: 30px 0 32px 0;
+      cursor: pointer;
+    }
+    &__link--cart{
+      padding-left: 9px;
+    }
+    &__link--form{
+      padding-right: 20px;
+    }
+    &__link--catalog{
+      padding-left: 17px;
+    }
+
+    &__link--sale,
+    &__link--new {
+        font-size: 15px;
+    }
+    &__link--sale{
+      padding-left: 19px;
+    }
+  }
+  .hamburger-btn.closed{
+  display: none;
+  }
+  button.search-submit{
+    top: 3px;
+    left: 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

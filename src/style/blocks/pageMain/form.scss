@@ -1,0 +1,1064 @@
+.form-page {
+  &__title--block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 177px;
+    background: $lightGray;
+margin-top: 0px;
+    width: 100%;
+  }
+  &__title {
+    @include textLg(27px, 700);
+    line-height: 1.1;
+    text-align: center;
+    margin-top: 16px;
+  }
+  &__text {
+    @include textLg(13px, 400);
+    line-height: 1.8;
+    color: #444444;
+    padding: 20px 30px 0 30px;
+    margin: 0;
+  }
+  &__form{
+    padding: 30px 30px 0 30px;
+  }
+  &__filedset--radio {
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+  }
+  &__legend,
+  &__legend--radio,
+  &__legend--checkbox {
+    text-transform: uppercase;
+    position: relative;
+    @include titleSm;
+    line-height: calc(16/17);
+    color: $greenLeft;
+    top: -2px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    &--radio{
+      min-height: 145px;
+    }
+
+    &--checkbox{
+      min-height: 402px;
+
+    }
+
+    &--name{
+      min-height: 290px;
+
+      margin-top: 18px;
+
+    }
+
+    &--info{
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 200px;
+      justify-content: center;
+    }
+
+
+  }
+  &__box{
+    min-height: 80px;
+  }
+  &__input--radio:not(checked) {
+    display: none;
+  }
+  &__input--radio:not(checked)+label {
+    padding-left: 65px;
+    top: 16px;
+  }
+  &__label--radio::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 2px;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #444444;
+    border-radius: 50%;
+  }
+  &__input--radio:checked+&__label--radio::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    width: 14px;
+    height: 14px;
+    background-color: #63d1bb;
+    border-radius: 50%;
+  }
+  &__label--radio {
+    position: relative;
+    @include textLg(17px, 700);
+    line-height: 1.05;
+    left: 0px;
+    cursor: pointer;
+  }
+  &__legend::after,
+  &__legend--checkbox::after {
+    position: absolute;
+    content: "";
+    width: 198px;
+    height: 1px;
+    background-color: $greenLeft;
+    left: 63px;
+    top: 8px;
+  }
+  &__section--radio {
+    display: flex;
+    min-width: 259px;
+    min-height: 46px;
+    align-items: center;
+    margin-top: 7px;
+    margin-bottom: 0px;
+  }
+   &__section--checkbox {
+     display: flex;
+     min-width: 263px;
+     min-height: 46px;
+     align-items: center;
+     margin-top: 5px;
+     margin-bottom: 10px;
+   }
+
+  &__filedset--checkbox {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  &__label--checkbox {
+    @include textLg(17px, 700);
+    line-height: 1.05;
+    cursor: pointer;
+  }
+  &__input--checkbox {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+  }
+  &__input--checkbox:not(checked) {
+    position: absolute;
+    display: none;
+  }
+  &__input--checkbox:not(checked)+label {
+    display: flex;
+    padding-left: 63px;
+    padding-top: 17px;
+  }
+  &__group--checkbox {
+    flex-direction: column;
+    display: flex;
+    margin-top: 10px;
+  }
+  &__input--checkbox:not(checked)+label::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 2px;
+    width: 36px;
+    height: 35px;
+    border: 2px solid #444444;
+    background: #fff;
+  }
+  &__input--checkbox+label:after {
+    position: absolute;
+    content: '';
+    height: 8px;
+    width: 20px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);
+    left: 10px;
+  }
+  &__input--checkbox+label {
+    position: relative;
+  }
+  &__input--checkbox+label:after {
+    content: none;
+  }
+  &__input--checkbox:checked+label:after {
+    content: '';
+  }
+  &__section--name {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  &__label--name {
+    display: flex;
+    @include textLg(17px, 700);
+    line-height: 1.05;
+  }
+  &__input-name {
+    @include textLg(18px, 400);
+    line-height: 1.07;
+    display: flex;
+    border: none;
+    color: #000;
+    opacity: 0.6;
+    border-bottom: 2px solid #000;
+    min-height: 50px;
+  }
+&__input-name:hover{
+  border-bottom: 2px solid $greenLeft;
+}
+
+
+
+
+  &__input-name:focus{
+    outline: none;
+  }
+  &__line{
+    position: relative;
+    top: -2px;
+    left: 0;
+    width: 100%;
+
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: $greenLeft;
+      display: none;
+    }
+  }
+  &__input-name:focus ~ &__line::before{
+    display: block;
+  }
+  &__legend--phone {
+    @include titleSm;
+    line-height: calc(16/17);
+    color: $greenLeft;
+    text-transform: uppercase;
+    top: 5px
+  }
+  &__legend--email {
+    @include titleSm;
+    line-height: calc(16/17);
+    color: $greenLeft;
+    text-transform: uppercase;
+    margin-top: 18px;
+  }
+  &__input--phone {
+    @include textLg(18px, 400);
+    line-height: 1.07;
+    width: 100%;
+    border: none;
+    color: #000;
+    opacity: 0.6;
+    border-bottom: 2px solid #000;
+    min-height: 50px;
+    outline: none;
+    margin-top: 10px;
+  }
+  &__input--phone:hover{
+     border-bottom: 2px solid $greenLeft;
+
+
+  }
+
+
+  &__input--email:focus ~ &__line::before{
+    display: block;
+  }
+  &__input--phone:focus ~ &__line::before{
+    display: block;
+  }
+
+  &__input--email {
+    @include textLg(18px, 400);
+    line-height: 1.07; //display: flex;
+    width: 100%;
+    border: none;
+    color: #000;
+    opacity: 0.6;
+    border-bottom: 2px solid #000;
+    min-height: 50px;
+    outline: none;
+    margin-top: 4px;
+  }
+&__input--email:hover {
+  border-bottom: 2px solid $greenLeft;
+}
+
+  &__label--phone {
+    position: relative;
+    width: 25px;
+    height: 24px;
+    top: 0px;
+    left: 0px;
+      &:after {
+      position: absolute;
+      content: '';
+      top: -38px;
+      left: 230px;
+      background: url('/src/img/sprites.png') -212px -263px;
+      width: 25px;
+      height: 24px;
+    }
+  }
+  &__input--phone:focus ~ &__label--phone::after{
+    display: none;
+  }
+  &__label--phone:hover::after {
+    position: absolute;
+    content: '';
+    top: -38px;
+    left: 230px;
+    background-position: -264px -263px;
+    width: 25px;
+    height: 24px;
+    }
+  &__input--phone:focus+&__label--phone::before {
+    position: absolute;
+    content: '';
+    top: -38px;
+    left: 230px;
+    background: url('/src/img/sprites.png') -264px -263px;
+    width: 25px;
+    height: 24px;
+  }
+  &__label--email {
+    position: relative;
+    width: 32px;
+    height: 21px;
+    top: 0;
+    left: 0;
+    &::after {
+      position: absolute;
+      content: "";
+      background: url('/src/img/css_sprites.png') -10px -10px;
+      width: 32px;
+      height: 21px;
+      top: -38px;
+      left: 227px;
+    }
+  }
+   &__legend--extra {
+     @include titleSm;
+     line-height: calc(16/17);
+     color: $greenLeft;
+     text-transform: uppercase;
+     top:10px;
+   }
+  &__textarea {
+    color: #000;
+    opacity: 0.6;
+    @include textLg(17px,
+    400);
+    line-height: 18px;
+    border: 2px solid $black;
+    background-color: $white;
+    margin-top: 35px;
+    align-self: center;
+    resize: none;
+    min-width: 250px;
+    min-height: 135px;
+    width:100%;
+    margin-left: 5px;
+    margin-bottom: 15px;
+  }
+  &__textarea:hover{
+    border: 2px solid $greenLeft;
+}
+  &__textarea:focus{
+    border: 2px solid $greenLeft;
+    outline: none;
+  }
+
+  &__wrap{
+    min-width: 260px;
+    min-height: 70px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 57px;
+  }
+  span {
+    @include textLg(14px,
+    400);
+    line-height: 1.14;
+    color: $darkGray;
+    margin-bottom: 32px;
+    margin-right: 11px;
+  }
+  &__btn {
+    @include textLg(17px,
+    700);
+    line-height: 0.9;
+    width: 260px;
+    height: 52px;
+  }
+  @media (min-width: 768px) {
+
+    &__form{
+      padding: 0;
+    }
+
+  &__title--block {
+      display: flex;
+      margin-top: 0px;
+      height: 217px;
+      width: 100%;
+    }
+    &__title {
+      text-align: center;
+      @include textLg(43px,700);
+      line-height: 1.1;
+      margin-top: 60px;
+    }
+    &__title-line:after {
+      content: "";
+      display: block;
+      position: relative;
+      background-repeat: repeat;
+      height: 10px;
+      background-size: 33px 14px;
+      background-image: radial-gradient(circle at 20px 13px, #f1f1f1 13px, transparent 13px);
+      right: 0;
+      left: 0px;
+      bottom: 0px;
+      transform: rotate(-180deg);
+    }
+    &__text {
+      @include textLg(17px,
+      400);
+      line-height: 1.7;
+      margin-left: 19px;
+      margin-top: 53px;
+    }
+    &__filedset--radio{
+      margin-bottom: 57px;
+    }
+    &__legend--radio {
+      text-transform: uppercase;
+      position: relative;
+      @include titleSm;
+      line-height: calc(16/17);
+      color: $greenLeft;
+      top: 75px;
+      left: 50px;
+    }
+    &__legend::after,
+    &__legend--checkbox::after {
+      display: none;
+    }
+    &__section--radio {
+      width: 100%;
+
+      margin: 19px 0 0 214px;
+    }
+    &__legend::after {
+      display: none;
+    }
+    &__label--radio {
+      display: flex;
+      ;
+    }
+    &__label--radio::before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      border: 2px solid #444444;
+      border-radius: 50%;
+      background: #fff;
+    }
+    &__input--radio:checked+&__label--radio::after {
+      content: '';
+      position: absolute;
+      top: 23px;
+      left: 16px;
+      width: 22px;
+      height: 22px;
+      background-color: #63d1bb;
+      border-radius: 50%;
+    }
+    &__label--radio {
+      position: relative;
+      @include textLg(19px,
+      700);
+      line-height: 0.9;
+      left: 0px;
+      cursor: pointer;
+    }
+    &__input--radio:not(checked)+&__label--radio {
+      position: relative;
+      padding: 25px 0 12px 81px;
+      display: flex;
+    }
+    &__filedset--checkbox {
+      min-width: 668px;
+      padding: 0;
+
+    }
+    &__legend--color {
+      text-transform: uppercase;
+      position: relative;
+      @include titleSm;
+      line-height: calc(16/17);
+      color: $greenLeft;
+      top: 84px;
+      left: 50px;
+    }
+    &__inner {
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    &--checkbox{
+      min-height: 304px;
+      justify-content: flex-end;
+      background-color: #f1f1f1;
+      width: 100%;
+      min-width: 768px;
+    }
+    &--info{
+      flex-direction: column;
+      min-height: 228px;
+      background-color: #f1f1f1;
+      width: 100%;
+      min-width: 768px;
+      justify-content: center;
+      align-items: center;
+
+    }
+    &--name{
+    min-width: 668px;
+    min-height: 245px;
+    display: flex;
+    width: 100%;
+    align-content: flex-start;
+    margin-bottom: 24px;
+    }
+    &--textarea{
+      min-width: 600px;
+      justify-content: center;
+
+      margin: 25px 0 0 162px;
+    }
+    }
+
+    &__group--checkbox {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+
+          margin-left: 218px;
+          max-height: 226px;
+          min-width: 500px;
+          margin-top: 34px;
+
+    }
+
+    &__section--checkbox {
+      display: flex;
+      align-self: normal;
+    }
+
+    &__input--checkbox:not(checked)+label::before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 50px;
+      height: 48px;
+      border: 2px solid #444444;
+      background: #fff;
+    }
+
+    &__label--checkbox {
+      @include textLg(19px, 700);
+      line-height: 0.9;
+    }
+
+    &__input--checkbox+label:after {
+      content: '';
+      height: 15px;
+      width: 28px;
+      border-left: 2px solid;
+      border-bottom: 2px solid;
+      transform: rotate(-45deg);
+      left: 12px;
+      top: 12px;
+    }
+
+    &__input--checkbox+label:after {
+      content: none;
+    }
+
+    &__input--checkbox:not(checked)+label {
+      padding-left: 78px;
+      padding-top: 15px;
+    }
+
+    &__legend--name {
+      top: 67px;
+      left: 50px;
+    }
+
+    &__section--name {
+      display: flex;
+      flex-direction: row;
+      min-width: 535px;
+      align-self: flex-start;
+      justify-content: space-around;
+      margin-left: 218px;
+      width: 100%;
+      margin-top: 14px;
+    }
+
+    &__label--name {
+      @include textLg(19px, 700);
+      line-height: 0.9;
+      align-self: center;
+    }
+
+    &__input-name {
+      min-width: 375px;
+      @include textLg(19px, 400);
+      line-height: 0.9;
+      margin: 0 45px 0 26px;
+      width: 100%;
+      &--name {
+        min-width: 425px;
+      }
+    }
+
+    &__line {
+      top: 52px;
+      left: -500px;
+      height: 2px;
+      &--last {
+        left: -422px;
+      }
+      &--phone {
+        top: 78px;
+        left: -500px;
+      }
+      &--email {
+        top: 53px;
+        left: -500px;
+      }
+    }
+
+    &__input-name:focus~&__line::before {
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 2px;
+      min-width: 430px;
+    }
+
+    &__input-name:focus~&__line--last::before {
+      min-width: 377px;
+    }
+
+    &__input--phone:focus~&__line--phone::before {
+      min-width: 500px;
+      height: 2px;
+
+    }
+
+    &__input--email:focus~&__line--email::before {
+      min-width: 500px;
+      height: 2px;
+    }
+
+    &__legend--phone {
+      @include titleSm;
+      line-height: calc(16/17);
+      color: $greenLeft;
+      text-transform: uppercase;
+      top: 71px;
+      left: 31px;
+
+    }
+
+    &__legend--email {
+      @include titleSm;
+      line-height: calc(16/17);
+      color: $greenLeft;
+      text-transform: uppercase;
+      position: relative;
+      top: 27px;
+      left: 30px;
+
+    }
+
+    &__box {
+      height: 85px;
+      display: flex;
+      min-width: 712px;
+
+    }
+
+    &__input--phone {
+      @include textLg(17px, 400);
+      line-height: 0.9;
+      background-color: #f1f1f1;
+      min-width: 500px;
+      width: 100%;
+      margin: 30px 0 0 195px;
+
+    }
+
+    &__box--email {
+      display: flex;
+      min-width: 712px;
+      height: 93px;
+    }
+
+    &__input--email {
+      @include textLg(17px, 400);
+      line-height: 0.9;
+      background-color: #f1f1f1;
+      min-width: 498px;
+      width: 100%;
+      margin: 0 0 40px 195px;
+      height: 52px;
+
+    }
+
+    &__label--phone {
+      position: relative;
+      width: 25px;
+      height: 24px;
+    }
+
+    &__label--phone:after {
+      position: absolute;
+      content: '';
+      top: 43px;
+      left: -52px;
+      background: url('/src/img/sprites.png') -212px -263px;
+      width: 25px;
+      height: 24px;
+    }
+    &__input--phone:hover {
+  border-bottom: 2px solid #63d1bb;
+  min-width: 500px;
+    }
+    &__input--phone:focus {
+
+      min-width: 500px;
+    }
+
+    &__input--email:focus {
+
+      min-width: 500px;
+    }
+
+    &__input--phone:focus+&__label--phone::before {
+      position: absolute;
+      content: '';
+      top: 43px;
+      left: -52px;
+      background: url('/src/img/sprites.png') -264px -263px;
+      width: 25px;
+      height: 24px;
+    }
+
+    &__label--phone:hover::after {
+      position: absolute;
+      content: '';
+      top: 43px;
+      left: -52px;
+      background-position: -264px -263px;
+      width: 25px;
+      height: 24px;
+    }
+
+    &__label--email {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 18px;
+        left: -53px;
+      }
+    }
+
+    &__legend--extra {
+      top: 70px;
+      left: 50px;
+    }
+
+    &__wrap {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 29px;
+      align-items: center;
+      margin-bottom: 41px;
+      height: 60px;
+    }
+    &__textarea {
+      @include textLg(19px,
+      400);
+      max-width: 493px;
+      margin-top: 13px;
+      align-self: center;
+    }
+    &__btn {
+      order: 1;
+      margin: 0;
+      width: 230px;
+margin-left: 7px;
+margin-top: 0px;
+    }
+    span {
+      @include textLg(17px,
+      400);
+      line-height: 1.7;
+      order: 2;
+
+      text-align: right;
+      align-self: center;
+          margin-top: 25px;
+    margin-left: 56px;
+    }
+    @media screen and (min-width: 1024px) {
+      &__title--block {
+        height: 245px;
+
+      }
+      &__title {
+
+        @include textLg(53px,
+        700);
+        line-height: 1;
+        margin-top: 50px;
+        margin-left: 5px;
+      }
+      &__text {
+        @include textLg(17px,
+        400);
+        line-height: 1.7;
+        max-width: 672px;
+        width: 100%;
+        margin-left: 223px;
+        margin-top:104px;
+        margin-bottom: 7px;
+      }
+       &__title-line:after {
+         content: "";
+         display: block;
+         position: relative;
+         background-repeat: repeat;
+         height: 10px;
+         background-size: 33px 14px;
+         background-image: radial-gradient(circle at 20px 13px, #f1f1f1 13px, transparent 13px);
+         right: 0;
+         left: 0px;
+         bottom: 0px;
+         transform: rotate(-180deg);
+       }
+
+       &__filedset--radio{
+        margin-bottom: 53px;
+      }
+      &__input--radio:not(checked) + label{
+        top: 10px;
+      }
+
+      &__label--radio{
+        padding: 20px 9px 9px 83px;
+
+}
+        &__label--radio::before{
+          top: 5px;
+          left: 2px;
+        }
+       
+
+      &__input--radio:checked + &__label--radio::after{
+        top: 24px;
+        left: 16px;
+      }
+&__section--radio{
+  margin: 5px 0 0 252px;
+
+}
+&__label--phone:hover::after {
+  position: absolute;
+  content: '';
+  top: 43px;
+  left: -172px;
+  background-position: -264px -263px;
+  width: 25px;
+  height: 24px;
+  }
+
+
+
+      &__legend--name,
+
+      &__legend--radio {
+        left: 141px;
+        top: 69px;
+      }
+        &__legend--color{
+         left: 136px;
+top: 84px;
+        }
+
+      &__inner--checkbox {
+        min-height: 228px;
+        height: auto;
+      }
+      &__group--checkbox {
+        flex-direction: row;
+        height: 146px;
+        flex-basis: 881px;
+        margin-right:65px;
+      }
+      &__section--name {
+        flex-basis: 770px;
+        margin-left: 254px;
+        margin-top: 12px;
+      }
+      &__input {
+        margin-left: 180px;
+        min-width: 500px;
+        &-name{
+          min-width: 570px;
+          margin: 0 0 0 20px;
+        }
+      }
+      &__legend--phone{
+        left: 60px;
+        top: 67px;
+
+      }
+      &__legend--email{
+        left: 60px;
+        top: 30px;
+}
+      &__input--phone
+       {
+                min-width: 700px;
+                margin: 17px 140px 0px 170px;
+
+
+
+
+      }
+
+      &__input--phone:hover{
+        border-bottom: 2px solid #63d1bb;
+        min-width: 700px;
+
+      }
+      &__input--email{
+        margin: 0px 140px 43px 170px;
+        min-width: 700px;
+
+      }
+      &__line {
+
+        &--name,
+        &--last{
+          left: -572px;
+        }
+        &--email{
+          top: 55px;
+          left: -841px;
+        }
+        &--phone{
+          top: 78px;
+          left: -841px;
+        }
+      }
+      &__input--phone:focus,
+      &__input--email:focus{
+        min-width: 700px;
+      }
+      &__input--email:focus ~ &__line--email::before{
+        min-width: 700px;
+      }
+      &__input--phone:focus ~ &__line--phone::before{
+        min-width: 700px;
+      }
+      &__input-name:focus ~ &__line--name::before,
+      &__input-name:focus ~ &__line--last::before{
+        min-width: 572px;
+      }
+      &__label--phone::after{
+           top: 43px;
+           left: -172px;
+      }
+      &__label--email::after{
+        top: 10px;
+        left: -170px;
+      }
+       &__input--phone:focus+&__label--phone::before {
+         position: absolute;
+         content: '';
+         top: 43px;
+         left: -172px;
+         background: url('/src/img/sprites.png') -264px -263px;
+         width: 25px;
+         height: 24px;
+       }
+       &__section--radio{
+        margin: 18px 0 0 252px;
+       }
+       &__label--radio::before{
+        top: 8px;
+        left: 0px;
+       }
+
+&__legend--extra{
+  left: 141px;
+  top: 66px;
+}
+      &__data {
+        width: 100%;
+        min-width: 1150px;
+      }
+
+&__inner--textarea{
+  margin-left: 171px;
+}
+      &__textarea {
+        min-width: 700px;
+        margin-right: 165px;
+        min-height: 132px;
+
+      }
+      &__wrap{
+        justify-content: space-around;
+        min-width: 700px;
+        width: 100%;
+        margin-top: 19px;
+        height: 60px;
+      }
+      span{
+        margin-right: 188px;
+        margin-top: 40px;
+      }
+      &__btn {
+        margin-left: 197px;
+        vertical-align: top;
+        margin-top: 10px;
+      }
+
+    }
+  }
+}

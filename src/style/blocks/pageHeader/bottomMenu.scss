@@ -1,0 +1,282 @@
+.menu-bottom {
+
+    @media only screen and (max-width: 767px) {
+         &__bg{
+           background: url(/src/img/header-mobile-1x.jpg);
+           background-position: 50% -17%;
+           background-repeat: no-repeat;
+           background-size: 100% auto;
+         }
+        }
+
+    &__title {
+        @include titleXlMob;
+        width: 244px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 69px 0 122px 0;
+    }
+
+    &__list {
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        height: 101px;
+        border: 1px solid transparent;
+        background-color: $greenLeft;
+        display: flex;
+    }
+
+  &__item:hover {
+        background-color: $greenRightHover;
+    }
+    &__item:last-child:hover{
+        background-color: $greenLeftHover;
+        border: 1px solid transparent;
+    }
+
+    &__link:active {
+        opacity: 0.4;
+    }
+
+
+    &__link {
+        position: relative;
+        color: $white;
+        text-decoration: none;
+        font-size: 19px;
+        line-height: calc(24/19);
+        font-weight: 700;
+        display: inline-block;
+        width: 100%;
+       
+        padding: 24px 165px 27px 28px;
+
+
+        &--left::before {
+            position: absolute;
+            content: "";
+            background: url(/src/img/sprites.png) no-repeat;
+            background-position: -226px -12px ;
+            width: 41px;
+            height: 62px;
+            top: 22px;
+            left: 76%;
+            }
+
+        &--right::before {
+        position: absolute;
+        content: "";
+        background: url(/src/img/sprites.png) no-repeat;
+        background-position: -315px -12px ;
+	    width: 61px;
+        height: 61px;
+        top: 19px;
+        left: 73%;
+        }
+
+    }
+
+    &__item:last-child {
+        border: 1px solid $greenRight;
+        background-color: $greenRight;
+    }
+}
+@media (min-width: 768px) {
+
+    .menu-bottom {
+
+        &__cover{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 748px;
+        }
+
+        &__bg{
+            background: url(/src/img/header-tablet-2x.jpg);
+            background-position: center -3px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-top: 1px solid $frameMenu;
+        }
+
+        &__title {
+            @include titleXlTab;
+            flex-grow: 1;
+            padding: 0;
+            width: 500px;
+            padding: 152px 0 0 0;
+        }
+
+        &__list{
+            display: flex;
+            position: relative;
+            width: 668px;
+        }
+
+        &__item{
+            width: 334px;
+            height: 119px;
+        }
+
+        &__link{
+            color: $white;
+            text-decoration: none;
+            font-size: 20px;
+            line-height: calc(30/20);
+            padding: 25px 170px 28px 34px;
+
+            &--left::before{
+                top: 27px;
+                left: 77%;
+            }
+
+            &--right::before{
+                top: 28px;
+                left: 72%;
+            }
+        }
+
+        &__line {
+            position: absolute;
+            width: 768px;
+            height: 16px;
+            top: 108px;
+            left: -50px;
+        }
+
+        &__line:before{
+            content: "";
+            position: absolute;
+            width: 768px;
+            left: 0px;
+            bottom: 0px;
+            right: 0;
+            background-repeat: repeat;
+            height: 10px;
+            background-size: 20px 20px;
+            background-image:  radial-gradient(circle at 10px -5px, transparent 10px, $white 11px);
+        }
+
+        &__line:after{
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            right: 0;
+            width: 768px;
+            background-repeat: repeat;
+            height: 15px;
+            background-size: 40px 35px;
+            background-image: radial-gradient(circle at 10px 15px, $white 14px, transparent 15px);
+        }
+        &__icon1{
+            z-index: 10;
+        }
+
+        &__icon2 {
+            position: absolute;
+            z-index: 10;
+        }
+
+        &__caption {
+            @include menuItemTab;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .menu-bottom {
+        width: 1200px;
+
+        &__bg {
+            background: url(/src/img/header-desktop-2x.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+        }
+
+        &__list {
+            position: relative;
+            width: 1050px;
+        }
+
+        &__title{
+            font-size: 52px;
+            width: 605px;
+            padding: 152px 0 0 0;
+        }
+
+        &__item {
+            width: 550px;
+            height: 121px;
+            border: transparent;
+        }
+        &__item:last-child:hover{
+            border: none;
+        }
+
+        &__link{
+            padding: 27px 350px 29px 40px;
+
+            &--left::before{
+                top: 33px;
+                left: 86%;
+            }
+            &--right::before{
+                top: 30px;
+                left: 82.6%;
+            }
+        }
+
+        &__line{
+            position: absolute;
+            height: 16px;
+            width: 1150px;
+            z-index: 10;
+            top: 108px;
+            left: -50px;
+        }
+
+        &__line:before{
+            content: "";
+            position: absolute;
+            width: 1150px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-repeat: repeat;
+            height: 10px;
+            background-size: 20px 20px;
+            background-image:  radial-gradient(circle at 10px -5px, transparent 10px, $white 11px);
+        }
+
+        &__line:after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 1150px;
+            background-repeat: repeat;
+            height: 15px;
+            background-size: 40px 35px;
+            background-image: radial-gradient(circle at 10px 15px, $white 14px, transparent 15px);
+        }
+        &__item:last-child {
+            background-color: $greenRight;
+            border: transparent;
+        }
+
+    }
+
+
+
+}

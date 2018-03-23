@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <script type="text/javascript" src="src/js/picturefill.js"></script>
+    <link rel="preload" href="dist/js/scripts.min.js" as="script">
+    <link rel="preload" href="src/fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/fonts/opensans-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/fonts/opensans-regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="src/fonts/opensans-bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="dist/css/main.css" as="style" onload="this.rel='stylesheet'">
+
+<title>Mishka - интернет - магазин - каталог</title>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav">
+        <div class="menu-top">
+                <div class="menu-top">
+                        <div class="menu-top__crown">
+                                <a class="menu-top__logo-link" href="index.html">
+                                    <img class="menu-top__logo-mobile" src="src/img/logo-mobile.png" width="86px" height="35px" alt="Mishka">
+                                </a>
+                               <div class="hamburger-menu">
+                                   <span class="hamburger-btn closed" id="buttonMenu"></span>
+                               </div>
+                        </div>
+                    <ul class="menu-top__list closed" id="menuList">
+                        <li class="menu-top__logo">
+                            <a class="menu-top__logo-link" href="index.html">
+                          
+                                <img class="menu-top__logo-tablet" src="src/img/logo-tablet.png" width="113px" height="46px" alt="Mishka">
+                                <img class="menu-top__logo-desktop" src="src/img/logo-desktop.png" width="149px" height="72px" alt="Mishka">
+                            </a>
+                        </li>
+                       <li class="menu-top__item">
+                           <a class="menu-top__link menu-top__link--catalog" href="catalog.html">
+                               Каталог товаров
+                            </a>
+                       </li>
+                       <li class="menu-top__item">
+                           <a class="menu-top__link menu-top__link--form" href="form.html" target="blank">Вязание на заказ</a>
+                       </li>
+                       <li class="menu-top__item">
+                           <form class="search-form"  method="get">
+                               <button class="search-submit" type="submit"></button>
+                               <label class="search-label">Поиск по сайту</label>
+                               <input class="search-input" type="search" name="search" placeholder="Поиск по сайту">
+                           </form>
+                       </li>
+                       <li class="menu-top__item menu-top__item--cart">
+                            <a class="menu-top__link menu-top__link--cart" href="#"><span class="menu-top__link-cart"></span>
+                                Корзина: пока пуста
+                            </a>
+                       </li>
+                       <li class="menu-top__item menu-top__item--delivery">
+                           <p class="menu-top__text menu-top__text--delivery">Бесплатная доставка по России</p>
+                       </li>
+                       <li class="menu-top__item menu-top__item--new">
+                           <a class="menu-top__link menu-top__link--new">Новые поступления</a>
+                       </li>
+                       <li class="menu-top__item menu-top__item--sale">
+                            <a class="menu-top__link menu-top__link--sale">Распродажа</a>
+                       </li>
+                  </ul>
+               <!-- </nav> -->
+        </div>
+    </nav>
+</header>
+    <main class="main-catalog">
+      <div class="main-catalog__title--block ">
+      <h2 class="main-catalog__title">Каталог товаров</h2>
+      </div>
+      <div class="main-catalog__title-line"></div>
+            <section class="catalog">
+
+      <div class="catalog__item">
+
+            <div class="catalog__img">
+<picture>
+  <source media="(min-width:320px) and (orientation: portrait)"
+   srcset="src/img/item1-mobile-1x.webp 1x, src/img/item1-mobile-2x.webp 2x"
+   srcset="src/img/item1-mobile-1x.jpg 1x, src/img/item1-mobile-2x.jpg 2x">
+  <source media="(min-width:768px) and (orientation:portait)"
+   srcset="src/img/item1-tablet-1x.webp 1x, src/img/item1-tablet-2x.webp 2x"
+   srcset="src/img/item1-tablet-1x.jpg 1x, src/img/item1-tablet-2x.jpg 2x">
+  <source media="(min-width: 1024px)"
+   srcset="src/img/item1-desktop-1x.webp 1x, src/img/item1-desktop-2x.webp 2x"
+   srcset="src/img/item1-desktop-1x.jpg 1x, src/img/item1-desktop-2x.jpg 2x">
+  <img src="src/img/item1-mobile-1x.jpg" alt="" class="catalog__img">
+</picture>
+</div>
+
+
+<div class="catalog__detail">
+                  <h3 class="catalog__title">Зайчик-попрыгайчик</h3>
+
+                        <p class="catalog__descr">Рост 30 см, вес 200 г</p>
+                    <div class="catalog-price">
+                        <p class="catalog-price__number">1 200 руб.</p>
+                        <a class="catalog-price__link" href="#">
+                          <img src="src/img/cart.png" alt="" class="catalog-price__link-pic">
+                        </a>
+                    </div>
+
+                    </div>
+                </div>
+
+                <div class="catalog__item">
+                  <div class="catalog__img">
+<picture>
+<source media="(min-width: 1024px)"
+   srcset="src/img/item2-desktop-1x.webp 1x, src/img/item2-desktop-2x.webp 2x"
+  srcset="src/img/item2-desktop-1x.jpg 1x, src/img/item2-desktop-2x.jpg 2x">
+  <source media="(min-width:768px) and (orientation:portait)"
+   srcset="src/img/item2-tablet-1x.webp 1x, src/img/item2-tablet-2x.webp 2x"
+   srcset="src/img/item2-tablet-1x.jpg 1x, src/img/item2-tablet-2x.jpg 2x">
+
+  <source media="(min-width:320px) and (orientation: portrait)" srcset="src/img/item2-mobile-1x.webp 1x, src/img/item2-mobile-2x.webp 2x"
+    srcset="src/img/item2-mobile-1x.jpg 1x, src/img/item2-mobile-2x.jpg 2x">
+  <img src="src/img/item2-mobile-1x.jpg" alt="" class="catalog__img">
+</picture>
+</div>
+<div class="catalog__detail">
+                  <h3 class="catalog__title">Корзинка для белья</h3>
+
+                        <p class="catalog__descr">Диаметр 15 см, высота 10 см</p>
+                      <div class="catalog-price">
+                        <p class="catalog-price__number">690 руб.</p>
+                        <a class="catalog-price__link" href="#">
+                          <img src="src/img/cart.png" alt="" class="catalog-price__link-pic">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+<div class="catalog__item">
+<div class="catalog__img">
+  <picture>
+<source media="(min-width: 1024px)"
+   srcset="src/img/item3-desktop-1x.webp 1x, src/img/item3-desktop-2x.webp 2x"
+   srcset="src/img/item3-desktop-1x.jpg 1x, src/img/item3-desktop-2x.jpg 2x">
+    <source media="(min-width:768px) and (orientation:portait)"
+     srcset="src/img/item3-tablet-1x.webp 1x, src/img/item3-tablet-2x.webp 2x"
+    srcset="src/img/item3-tablet-1x.jpg 1x, src/img/item3-tablet-2x.jpg 2x">
+
+    <source media="(min-width:320px) and (orientation: portrait)" srcset="src/img/item3-mobile-1x.webp 1x, src/img/item3-mobile-2x.webp 2x"
+      srcset="src/img/item3-mobile-1x.jpg 1x, src/img/item3-mobile-2x.jpg 2x">
+    <img src="src/img/item3-mobile-1x.jpg" alt="" class="catalog__img">
+</picture>
+</div>
+<div class="catalog__detail">
+                  <h3 class="catalog__title">Большая корзинка для игрушек</h3>
+
+                        <p class="catalog__descr--line">Диаметр 30 см, высота 30 см</p>
+                      <div class="catalog-price">
+                        <p class="catalog-price__number">1 500 руб.</p>
+                        <a class="catalog-price__link" href="#">
+                          <img src="src/img/cart.png" alt="" class="catalog-price__link-pic">
+                        </a>
+                      </div>
+                    </div>
+                </div>
+            </section>
+            <section class="player-video">
+              <div class="player-video__description">
+                <h3 class="player-video__title">Процесс производства</h3>
+
+                <span class="player-video__link-pic"></span>
+
+              </div>
+            <div class="video-page">
+
+          <div class="video-page__video">
+
+<button class="video-page__link-pic"></button>
+<picture>
+<source media="(min-width: 1024px)"
+  srcset="src/img/video-desktop.webp "
+   srcset="src/img/video-desktop.png">
+  <source media="(min-width:768px) and (orientation:portait)"
+   srcset="src/img/video-tablet-1x.webp 1x, src/img/video-tablet-2x.webp 2x"
+    srcset="src/img/video-tablet-1x.jpg 1x, src/img/video-tablet-2x.jpg 2x">
+
+   <source media="(min-width:320px) and (orientation: portrait)"
+   srcset="src/img/video-mobile-1x.webp 1x, src/img/video-mobile-2x.webp 2x"
+    srcset="src/img/video-mobile-1x.jpg 1x, src/img/video-mobile-2x.jpg 2x">
+  <img src="src/img/video-mobile-1x.jpg" alt="video" class="catalog__img">
+</picture>
+
+</div>
+
+        </div>
+    <div class="video-page__descr">
+                      <p> По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+                </div>
+<button class="btn player__btn" id="btn" >Сделать заказ</button>
+
+<div class="modal-ctg" id="modal">
+
+  <h2 class="modal-ctg__title">Добавить в корзину</h2>
+  <p class="modal-ctg__text">Выберите размер</p>
+    <div class="modal-ctg__form">
+      <div class="modal-ctg__form--group">
+      <input class="modal-ctg__input" type="radio" name="check" id="radio1" checked>
+      <label class="modal-ctg__size" for="radio1">S</label>
+      </div>
+      <div class="modal-ctg__form--group">
+      <input class="modal-ctg__input" type="radio" name="check" id="radio2">
+      <label class="modal-ctg__size " for="radio2">M</label>
+      </div>
+      <div class="modal-ctg__form--group">
+      <input class="modal-ctg__input" type="radio" name="check" id="radio3">
+      <label class="modal-ctg__size" for="radio3">L</label>
+      </div>
+    </div>
+    <button  class="btn modal-ctg__btn" id="closeBtn" >Добавить</button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+</section>
+       </main>
+       <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__inner">
+                <div class="footer__logo">
+                    <a class="footer__logo-link">
+                        <img class="footer__logo" src="src/img/logo-footer.png" width="102px" height="34px" alt="Mishka">
+                    </a>
+               </div>
+               <div class="footer__social">
+                    <a class="footer__link footer__insta" href="#">
+
+                    </a>
+                    <a class="footer__link footer__facebook" href="#">
+
+                    </a>
+                    <a class="footer__link footer__twitter" href="#">
+
+                    </a>
+               </div>
+               <div class="footer__copyright">
+                   <p class="footer__creator">Разработано
+                       <span class="footer__icon"></span>
+                  </p>
+               </div>
+           </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="dist/js/scripts.min.js"></script>
+</body>
+</html>

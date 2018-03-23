@@ -1,0 +1,151 @@
+.footer {
+  &__bg {
+    background: $lightGray;
+    width: 100%;
+  }
+  &__inner {
+    display: block;
+    margin: 10px 0 0 0;
+    width: 100%;
+    height: 160px;
+  }
+  &__logo {
+    display: none;
+  }
+  &__link {
+    margin: 22px 19px 5px 13px;
+
+  }
+  &__social {
+    display: block;
+    height: 80px;
+    width: 195px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+  }
+  &__insta {
+    display: inline-block;
+    background: url('/src/img/sprites.png') -14px -60px;
+    width: 24px;
+    height: 24px;
+  }
+  &__insta:hover {
+    display: inline-block;
+    background: url('/src/img/sprites.png') -62px -61px;
+    width: 24px;
+    height: 24px;
+  }
+  &__insta:active {
+    display: inline-block;
+    background: url('/src/img/sprites.png') -114px -60px;
+    width: 24px;
+    height: 24px;
+  }
+  &__facebook {
+    display: inline-block;
+    background: url('/src/img/sprites.png') -15px -108px;
+    width: 20px;
+    height: 32px;
+  }
+  &__facebook:hover {
+    display: inline-block;
+    background: url('/src/img/sprites.png') -62px -108px;
+    width: 20px;
+    height: 32px;
+  }
+  &__facebook:active {
+    display: inline-block;
+    background: url('/src/img/sprites.png') -112px -109px;
+    width: 20px;
+    height: 32px;
+  }
+  &__twitter {
+    display: inline-block;
+    background: url('/src/img/sprites.png') -13px -13px;
+    width: 26px;
+    height: 22px;
+  }
+  &__twitter:hover {
+    display: inline-block;
+    background: url('/src/img/sprites.png') -59px -14px;
+    width: 26px;
+    height: 22px;
+  }
+  &__twitter:active {
+    display: inline-block;
+    background: url('/src/img/sprites.png') -110px -14px;
+    width: 26px;
+    height: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    &__inner {
+      @include flexbox;
+
+      height: 143px;
+      align-items: center;
+margin-top: 30px;
+      justify-content: space-between;
+    }
+    &__logo {
+      display: flex;
+      flex-basis: 31%;
+      text-align: center;
+      margin: 0 0 0px 24px;
+    }
+    &__logo-link {
+      display: inline-block;
+      margin-left: 0;
+    }
+    &__logo-link:hover img {
+      opacity: 0;
+    }
+    &__logo-link:hover {
+      display: inline-block;
+      background: url('/src/img/sprites.png') -600px -132px;
+      width: 102px;
+      height: 34px;
+      margin-left: 24px;
+    }
+    &__logo-link:active {
+      display: inline-block;
+      background: url('/src/img/sprites.png') -600px -173px;
+      width: 102px;
+      height: 34px;
+    }
+    &__social {
+      margin-left: 28px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    width: 100%;
+    min-width: 1200px;
+    &__inner {
+      margin-top: 44px;
+    }
+    &__logo {
+      margin: 0 0 4px 39px;
+    }
+    &__logo-link:hover {
+      display: inline-block;
+      background: url('/src/img/sprites.png') -600px -134px;
+      width: 102px;
+      height: 34px;
+      margin-left: 39px;
+    }
+    &__logo-link:active {
+      opacity: 0.3;
+    }
+    &__social {
+
+      margin-left: 97px;
+    }
+  }
+}
+

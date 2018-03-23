@@ -1,0 +1,428 @@
+.about-us {
+    padding: 7px 32px 32px 32px;
+
+    &__title{
+      @include titleLMob;
+      margin: 0;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+    &__features{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    &__feature {
+      @include titleSm;
+      padding: 7px 0 0 0;
+     
+      margin: 0;
+    }
+
+    &__feature::before{
+      margin: 20px 0 25px 0px;
+    }
+
+    &__feature--fabric::before{
+      content: '';
+      display: block;
+      background: url(/src/img/sprites.png);
+      background-position: -157px -7px ;
+	    width: 33px;
+      height: 38px;
+      margin: 24px 0 18px 5px;
+    }
+
+    &__feature--style::before{
+      content: '';
+      display: block;
+      background: url(/src/img/sprites.png);
+      background-position: -151px -58px ;
+	    width: 47px;
+      height: 27px;
+      margin: 22px 0px 27px 0px;
+    }
+
+    &__feature--likes:before{
+      content: '';
+      display: block;
+      background: url(/src/img/sprites.png);
+      background-position: -157px -109px ;
+	    width: 34px;
+      height: 27px;
+      margin: 27px 0 22px 5px;
+    }
+
+    &__feature--love:before{
+      content: '';
+      display: block;
+      background: url(/src/img/sprites.png);
+      background-position: -155px -156px ;
+	    width: 35px;
+      height: 34px;
+      margin: 24px 0 17px 1px;
+    }
+
+    &__feature--native:before{
+      content: '';
+      display: block;
+      background: url(/src/img/sprites.png);
+      background-position: -159px -212px ;
+	    width: 48px;
+      height: 23px;
+      margin: 26px 0 27px 0;
+    }
+
+    &__feature--box:before{
+      content: '';
+      display: block;
+      background: url(/src/img/sprites.png);
+      background-position: -157px -255px ;
+	    width: 33px;
+      height: 32px;
+      margin: 24px 0 20px 1px;
+    }
+    .slider{
+      min-height: 602px;
+    }
+}
+
+.slider {
+  padding: 0 32px;
+  min-height: 614px;
+
+  &__caption{
+    margin-top: 25px;
+  }
+
+  &__slide1{
+    position: relative;
+    height: 360px;
+  }
+
+  &__slide2{
+    display: none;
+    position: relative;
+    height: 360px;
+  }
+
+  &__slide3{
+    display: none;
+    position: relative;
+    height: 360px;
+  }
+
+    &__title {
+      @include titleLMob;
+    }
+
+    &__comment {
+      font-size: 15px;
+      line-height: calc(30/15);
+      color: $darkGray;
+      height: 270px;
+      padding-top: 5px;
+      margin-bottom: 27px;
+    }
+
+    &__auth {
+      @include titleSm;
+      line-height: calc(24/17);
+    }
+    &__nick {
+      font-size: 17px;
+      line-height: calc(30/17);
+      color: $darkGray;
+    }
+
+    &__controls{
+      margin: 30px 0 40px 0;
+    }
+
+    &__btn-left{
+      background: url(/src/img/sprites.png)  -193px -100px no-repeat;
+      width: 125px;
+      height: 26px;
+      border: 1px solid $frameMenu;
+      padding: 24px 0px 24px 0px;
+      left: 0;
+    }
+
+    &__btn-right{
+      background: url(/src/img/sprites.png) -277px -99px no-repeat;
+      width: 126px;
+      height: 26px;
+      border: 1px solid $frameMenu;
+      padding: 24px 0px 24px 0px;
+      right: 0;
+    }
+
+    &__btn-left:hover{
+      opacity: 0.6;
+    }
+
+    &__btn-right:hover{
+      opacity: 0.6;
+    }
+
+    &__btn-left:active {
+      opacity: 0.3;
+    }
+
+    &__btn-right:active {
+      opacity: 0.3;
+    }
+
+    &__write{
+      margin: 0;
+    }
+  }
+
+@media (min-width: 768px) {
+
+  .about-us {
+
+    width: 668px;
+    margin: 0 auto;
+
+    &__title {
+      align-self: flex-start;
+      @include titleXlTab;
+      margin-bottom: 15px;
+    }
+
+    &__list {
+    flex-direction: row;
+    min-height: 443px;
+   }
+   &__feature{
+    font-size: 19px;
+    line-height: calc(22/19);
+  }
+  &__feature{
+    &--fabric::before{
+      margin: 26px 0 17px 8px;
+    }
+    &--style::before{
+      margin: 51px 0px 26px 1px;
+    }
+    &--likes::before{
+      margin: 56px 0 21px 8px;
+    }
+    &--love::before{
+      margin: 30px 0 16px 8px;
+    }
+    &--native::before{
+      margin: 55px 0 26px 6px;
+    }
+    &--box::before{
+      margin: 53px 0 19px 8px;
+    }
+  }
+}
+
+.slider {
+  padding: 0;
+  width: 768px;
+  min-height: 475px;
+  margin: 50px 0;
+
+  &__bg {
+    background-image: url(/src/img/review-1x.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 345px 455px;
+    height: 455px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__caption{
+    width: 225px;
+    @include titleXlTab;
+    margin: 0;
+    padding-top: 77px;
+    order: -1;
+    flex-grow: 1;
+    margin-left: 45px;
+  }
+
+  &__slides{
+    display: flex;
+    flex-direction: column;
+    width: 668px;
+    height: 232px;
+    margin-left: 50px;
+  }
+
+  &__slide1, &__slide2, &__slide3{
+    height: 231px;
+  }
+
+  &__slide1, &__slide2, &__slide3 {
+    display: flex;
+    flex-direction: column;
+    order: 3;
+  }
+
+  &__slide2 {
+    display: none;
+  }
+  &__slide3 {
+    display: none;
+  }
+
+
+  &__write {
+    align-self: center;
+    order: -1;
+    width: 180px;
+    margin: 0;
+    width: 175px;
+    height: 50px;
+    margin: 34px 50px 0 0;
+    padding: 2px 0 2px 1px;
+  }
+
+  &__comment {
+    @include descrTablet;
+    width: 650px;
+    height: 170px;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  &__user {
+    width: 260px;
+  }
+  &__auth{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: calc(38/18);
+  }
+
+  &__controls {
+    align-self: flex-end;
+    order: 4;
+    position: relative;
+    top: -67px;
+    left: -17px;
+    width: 140px;
+  }
+
+  &__btn-left {
+    background: url(/src/img/sprites.png)  -225px -109px no-repeat;
+    width: 50px;
+    height: 26px;
+    border: none;
+    outline: none;
+    margin-right: 35px;
+  }
+
+  &__btn-right {
+    background: url(/src/img/sprites.png) -321px -108px no-repeat;
+    width: 50px;
+    height: 26px;
+    border: none;
+    outline: none;
+
+  }
+}
+}
+
+@media (min-width: 1024px) {
+
+  .about-us{
+    padding: 0;
+    min-width: 700px;
+    height: 550px;
+
+    &__title{
+      @include titleDesk;
+      line-height: calc(53/53);
+      margin-bottom: 26px;
+    }
+    &__features{
+      min-width: 350px;
+    }
+    &__feature{
+      font-size: 19px;
+      padding: 4px 0 31px 4px;
+
+      &--fabric::before{
+        margin: 19px 0 18px 7px;
+      }
+      &--style::before{
+        margin: 22px 0 26px 0px;
+      }
+      &--likes::before{
+        margin: 28px 7px 20px 7px;
+      }
+
+      &--love::before{
+        margin: 23px 0 16px 2px;
+      }
+      &--native::before{
+        margin: 27px 0 27px 0;
+      }
+      &--box::before{
+        margin: 24px 0 20px 2px;
+      }
+    }
+  }
+
+  .slider {
+
+    min-width: 1055px;
+    min-height: 453px;
+    margin: 50px auto;
+
+    &__caption {
+      @include titleDesk;
+      line-height: 1;
+      padding-top: 74px;
+      margin: 0 0 0 177px;
+    }
+
+    &__slide1, &__slide2, &__slide3{
+      height: 201px;
+    }
+
+    &__slides{
+      min-width: 880px;
+      margin-left: 177px;
+    }
+
+    &__comment {
+      min-width: 781px;
+      height: 126px;
+      line-height: calc(31/17);
+      margin: 0;
+    }
+    &__auth{
+      line-height: calc(33/18);
+    }
+    &__controls{
+      top: -73px;
+      left: -17px;
+      width: 141px;
+    }
+    &__write{
+      width: 175px;
+      height: 52px;
+      margin: 39px 0 0 0;
+    }
+    &__btn-left{
+      margin-right: 32px;
+    }
+    &__btn-right{
+      width: 54px;
+    }
+  }
+}
+
+
+

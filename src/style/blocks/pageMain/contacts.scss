@@ -1,0 +1,206 @@
+.contacts {
+
+min-height: 850px;
+
+
+    &__title{
+        @include titleContactMobile;
+        padding: 0 32px;
+
+        line-height: calc(30/18);
+        margin: 24px 0 0 0;
+
+    }
+
+    &__wrap {
+        @include flexbox;
+        justify-content: space-between;
+        align-items: baseline;
+        @include itemTop;
+        line-height: calc(30/15);
+        padding: 20px 0px 10px 0px;
+        color: $darkGray;
+    }
+
+    &__box {
+        padding: 0 32px;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        margin: 0;
+        text-transform: lowercase;
+    }
+
+    &__link {
+        padding: 3px 3px 3px 3px;
+        text-decoration: none;
+        color: $darkGray;
+        position: relative;
+    }
+
+    &__link::after{
+        content: "";
+        top: 31px;
+        left: 3px;
+        position: absolute;
+        border-bottom: 1px solid $greenLeft;
+        width: 180px;
+    }
+
+    &__address {
+        width: 145px;
+        font-style: normal;
+        padding-right: 35px;
+    }
+
+    &__btn{
+        margin: 45px 0 0 30px;
+        width: 260px;
+        font-size: 18px;
+
+    }
+
+}
+#map{
+    width: 100%;
+    height: 455px;
+    display: block;
+    background-image: url(map-mobile-1x.jpg);
+}
+
+@media (min-width: 768px) {
+
+    .contacts {
+        padding: 0;
+        min-height: 837px;
+
+        &__inner{
+         min-width: 668px;
+        }
+
+
+        &__title{
+            @include titleXlTab;
+           margin: 51px 0 0 44px;
+           padding: 0;
+        }
+
+        &__box {
+            @include flexbox;
+            justify-content: space-between;
+            width: 668px;
+            padding: 0;
+            margin: 29px 0 48px 50px;
+        }
+
+        &__wrap {
+            min-width: 42%;
+            font-size: 17px;
+            line-height: calc(30/17);
+
+        }
+        &__wrap:last-child{
+            min-width: 41%;
+            margin-left: 39px;
+        }
+
+        &__address {
+            width: 195px;
+            padding: 0;
+        }
+
+        &__link{
+            padding: 0;
+        }
+
+        &__link:after{
+            width: 204px;
+        }
+
+        &__icon{
+            background: url(/src/img/sprites.png);
+            background-position: -405px -113px ;
+	        width: 47px;
+            height: 90px;
+            order: 1;
+            position: relative;
+            top: -95px;
+            left: -3px;
+        }
+        &__btn{
+            width: 230px;
+            margin: 54px 0 0 269px;
+            height: 51px;
+        }
+    }
+    #map{
+        height: 459px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .contacts{
+        min-width: 1050px;
+        min-height: 524px;
+        margin: 0 auto;
+
+        &__inner{
+          width: 1050px;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-content: flex-end;
+          height: 528px;
+          margin: 0 auto;
+        }
+        &__box{
+            flex-wrap: wrap;
+            width: 311px;
+            height: 238px;
+            margin: 0;
+            order: 2;
+            padding: 0 32px;
+        }
+        &__wrap{
+            width: 310px;
+            padding: 30px 0 0 4px;
+        }
+        &__wrap:last-child{
+            margin: 0;
+        }
+        &__link{
+            width: 230px;
+        }
+        &__address{
+            width: 230px;
+        }
+
+        &__map{
+            order: 3;
+            align-self: flex-end;
+
+            margin-top: 11px;
+        }
+        &__btn{
+            order: 2;
+            margin: 22px 0 0 37px;
+            width: 230px;
+        }
+        &__title{
+            @include titleDesk;
+            order: 1;
+            margin: 79px 48px 20px 0;
+            padding: 0 32px;
+        }
+        &__icon{
+            top: -265px;
+            left: -107px;
+        }
+    }
+    #map{
+        min-width: 525px;
+    }
+}

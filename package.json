@@ -1,0 +1,69 @@
+{
+  "name": "mishka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": " Aleksey Malyshev",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-build": "^0.5.3",
+    "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-include": "^2.3.1",
+    "gulp-minify": "^2.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.2.0",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglify-es": "^1.0.1",
+    "gulp-webp": "^2.3.0",
+    "gulp.spritesmith": "^6.9.0",
+    "imagemin-optipng": "^5.2.1",
+    "install": "^0.10.4",
+    "npm": "^5.7.1",
+    "picturefill": "^3.0.2",
+    "posthtml-include": "^1.1.0"
+  },
+  "scripts": {
+    "stylelint": "stylelint 'sass/**/*.scss' --syntax sass",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve",
+    "images": "gulp img",
+    "copy": "gulp copy",
+    "clean": "gulp clean"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "sass/**/*.scss"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "mishka"
+  ],
+  "homepage": "",
+  "dependencies": {}
+}

@@ -1,0 +1,75 @@
+@mixin textLg($size, $weight) {
+  font: {
+   
+    size: $size;
+    weight: $weight;
+  }
+}
+ @mixin titleSm {
+   font-size: 17px;
+   font-weight: 700;
+   line-height: calc(20/17);
+ }
+ @mixin titleContactMobile {
+   font-size: 18px;
+   font-weight: 700;
+   line-height: calc(30/18);
+ }
+ @mixin itemTop {
+  font-size: 15px;
+  line-height: calc(24/15);
+ }
+ @mixin titleXlMob {
+  font-size: 27px;
+  line-height: calc(30/27);
+  font-weight: 700;
+  color: $black;
+ }
+ @mixin titleLMob{
+   font-size: 25px;
+   line-height: calc(30/25);
+   font-weight: 700;
+   color: $black;
+ }
+ @mixin descrTablet{
+  font-size: 17px;
+  line-height: calc(30/17);
+ }
+ @mixin menuItemTab {
+   font-size: 20px;
+   line-height: calc(30/20);
+   font-weight: 700;
+ }
+ @mixin titleXlTab {
+   font-size: 43px;
+   line-height: calc(50/43);
+   font-weight: 700;
+ }
+ @mixin titleDesk{
+   font-size: 53px;
+   line-height: calc(57/53);
+   font-weight: 700;
+ }
+ @mixin flexbox {
+  display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
+ }
+@mixin input-placeholder {
+  ::-webkit-input-placeholder {
+     @content;
+}
+  :-moz-placeholder {
+     @content;
+}
+  ::-moz-placeholder {
+     @content;
+}
+  :-ms-input-placeholder {
+     @content;
+}
+
+}
+

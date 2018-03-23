@@ -1,0 +1,20 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+@import 'normalize.scss';
+
+@import 'blocks/global/body.scss';
+@import 'sprites.scss';
+@import 'blocks/global/body.scss';
+
+
+
+@import 'blocks/pageHeader/topMenu.scss';
+@import 'blocks/pageHeader/bottomMenu.scss';
+
+@import 'blocks/pageMain/catalogItems.scss';
+@import 'blocks/pageMain/aboutUs.scss';
+@import 'blocks/pageMain/contacts.scss';
+@import 'blocks/pageMain/form.scss';
+
+@import 'blocks/pageFooter/topFooter.scss';
+@import 'blocks/pageFooter/bottomFooter.scss';
