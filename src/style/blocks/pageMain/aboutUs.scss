@@ -17,7 +17,7 @@
     &__feature {
       @include titleSm;
       padding: 7px 0 0 0;
-     
+
       margin: 0;
     }
 
@@ -28,7 +28,7 @@
     &__feature--fabric::before{
       content: '';
       display: block;
-      background: url(/src/img/sprites.png);
+      background: url('/src/img/sprites.png');
       background-position: -157px -7px ;
 	    width: 33px;
       height: 38px;
@@ -38,7 +38,7 @@
     &__feature--style::before{
       content: '';
       display: block;
-      background: url(/src/img/sprites.png);
+      background: url('/src/img/sprites.png');
       background-position: -151px -58px ;
 	    width: 47px;
       height: 27px;
@@ -48,7 +48,7 @@
     &__feature--likes:before{
       content: '';
       display: block;
-      background: url(/src/img/sprites.png);
+      background: url('/src/img/sprites.png');
       background-position: -157px -109px ;
 	    width: 34px;
       height: 27px;
@@ -58,7 +58,7 @@
     &__feature--love:before{
       content: '';
       display: block;
-      background: url(/src/img/sprites.png);
+      background: url('/src/img/sprites.png');
       background-position: -155px -156px ;
 	    width: 35px;
       height: 34px;
@@ -68,7 +68,7 @@
     &__feature--native:before{
       content: '';
       display: block;
-      background: url(/src/img/sprites.png);
+      background: url('/src/img/sprites.png');
       background-position: -159px -212px ;
 	    width: 48px;
       height: 23px;
@@ -78,7 +78,7 @@
     &__feature--box:before{
       content: '';
       display: block;
-      background: url(/src/img/sprites.png);
+      background: url('/src/img/sprites.png');
       background-position: -157px -255px ;
 	    width: 33px;
       height: 32px;
@@ -142,7 +142,7 @@
     }
 
     &__btn-left{
-      background: url(/src/img/sprites.png)  -193px -100px no-repeat;
+      background: url('/src/img/sprites.png')  -193px -100px no-repeat;
       width: 125px;
       height: 26px;
       border: 1px solid $frameMenu;
@@ -151,7 +151,7 @@
     }
 
     &__btn-right{
-      background: url(/src/img/sprites.png) -277px -99px no-repeat;
+      background: url('/src/img/sprites.png') -277px -99px no-repeat;
       width: 126px;
       height: 26px;
       border: 1px solid $frameMenu;
@@ -230,7 +230,7 @@
   margin: 50px 0;
 
   &__bg {
-    background-image: url(/src/img/review-1x.jpg);
+    background-image: url('/src/img/review-1x.jpg');
     background-position: left;
     background-repeat: no-repeat;
     background-size: 345px 455px;
@@ -314,7 +314,7 @@
   }
 
   &__btn-left {
-    background: url(/src/img/sprites.png)  -225px -109px no-repeat;
+    background: url('/src/img/sprites.png')  -225px -109px no-repeat;
     width: 50px;
     height: 26px;
     border: none;
@@ -323,7 +323,7 @@
   }
 
   &__btn-right {
-    background: url(/src/img/sprites.png) -321px -108px no-repeat;
+    background: url('/src/img/sprites.png') -321px -108px no-repeat;
     width: 50px;
     height: 26px;
     border: none;

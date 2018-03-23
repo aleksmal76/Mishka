@@ -57,7 +57,7 @@ cursor: pointer;
 .hamburger-btn.opened::before{
 cursor: pointer;
   	transform: rotate(-45deg);
-  	
+
 
 }
 
@@ -130,7 +130,7 @@ cursor: pointer;
   }
 
   &__link-cart:hover{
-    background: url(/src/img/sprites.png) no-repeat;
+    background: url('/src/img/sprites.png') no-repeat;
     background-position: -65px -215px ;
     width: 21px;
     height: 18px;
@@ -141,7 +141,7 @@ cursor: pointer;
   }
 
   &__link-cart:active{
-    background: url(/src/img/sprites.png) no-repeat;
+    background: url('/src/img/sprites.png') no-repeat;
     background-position: -114px -215px ;
     width: 21px;
     height: 18px;
@@ -218,7 +218,7 @@ input.search-input::placeholder{
 button.search-submit{
   border: none;
   cursor: pointer;
-  background: url(/src/img/sprites.png) no-repeat;
+  background: url('/src/img/sprites.png') no-repeat;
   background-position: -16px -261px ;
 	width: 18px;
   height: 19px;
@@ -230,7 +230,7 @@ button.search-submit{
 }
 
 button.search-submit:hover {
-  background: url(/src/img/sprites.png) no-repeat;
+  background: url('/src/img/sprites.png') no-repeat;
   background-position: -62px -260px ;
 	width: 18px;
   height: 18px;
@@ -241,7 +241,7 @@ button.search-submit:hover {
 
 }
 button.search-submit:active {
-  background: url(/src/img/sprites.png) no-repeat;
+  background: url('/src/img/sprites.png') no-repeat;
   background-position: -114px -259px ;
 	width: 18px;
 	height: 18px;
@@ -365,13 +365,13 @@ button.search-submit:hover{
     &__link--catalog{
       font-size: 15px;
       line-height: 0;
-      padding: 27px 13px 32px 0; 
+      padding: 27px 13px 32px 0;
     }
 
     &__link--form{
-      font-size: 15px; 
-      line-height: 0;  
-      padding: 27px 13px 32px 0; 
+      font-size: 15px;
+      line-height: 0;
+      padding: 27px 13px 32px 0;
     }
 
     &__link:nth-child(3) {
@@ -465,7 +465,7 @@ input.search-input::placeholder{
 
   &__logo-img{
     display: block;
-    background: url(/src/img/sprites.png) -579px -9px no-repeat;
+    background: url('/src/img/sprites.png') -579px -9px no-repeat;
 	  width: 149px;
     height: 72px;
     margin: 5px auto;
